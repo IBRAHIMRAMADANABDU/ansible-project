@@ -5,3 +5,15 @@
   roles:
     - mariaDB
     - php
+
+    - apache
+
+
+  tasks:
+    - name: Debug - Check Apache installation
+      shell: "httpd -v"
+      register: apache_version
+
+    - name: Show Apache version
+      debug:
+        msg: "Apache version is {{ apache_version.stdout }}"
