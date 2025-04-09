@@ -1,0 +1,39 @@
+# tasks/main.yaml
+---
+- name: Install MariaDB server
+  yum:
+    name: mariadb-server
+    state: present
+    update_cache: yes
+
+- name: Install Python MySQL module (required for Ansible mysql modules)
+  yum:
+    name: python3-PyMySQL
+    state: present
+
+- name: Start and enable MariaDB service
+  service:
+    name: mariadb
+    state: started
+    enabled: yes
+
+- name: Secure MariaDB root user (set password)
+  community.mysql.mysql_user:
+    name: root
+    host_all: yes
+    password: "{{ mariadb_root_password }}"
+  become: yes
+
+- name: Create WordPress database
+  community.mysql.mysql_db:
+    name: "{{ mariadb_wp_db }}"
+    state: present
+
+- name: Create WordPress DB user
+  community.mysql.mysql_user:
+    name: "{{ mariadb_wp_user }}"
+    password: "{{ mariadb_wp_password }}"
+    priv: "{{ mariadb_wp_db }}.*:ALL"
+    host: localhost
+    state: present
+

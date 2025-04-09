@@ -1,0 +1,6 @@
+---
+- name: Deploy WordPress Stack
+  hosts: wordpress
+  become: yes
+  roles:
+    - mariaDB

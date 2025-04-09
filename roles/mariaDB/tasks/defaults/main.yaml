@@ -1,0 +1,6 @@
+
+mariadb_root_password: "rootpass"
+mariadb_wp_db: "wordpress"
+mariadb_wp_user: "wpuser"
+mariadb_wp_password: "wppassword"
+
