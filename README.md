@@ -23,28 +23,7 @@ Before running the Ansible playbook, ensure you have the following:
 ## Project Structure
 
 Here is the structure of the project directory:
-ansible-project/
-│
-├── inventory.ini           # Inventory file with server details (IP, etc.)
-├── playbook.yaml           # Main playbook that calls roles
-│
-├── roles/                  # Directory for Ansible roles
-│   ├── apache/             # Role for Apache installation and configuration
-│   │   ├── tasks/          # Tasks related to Apache
-│   │       ├── main.yaml   # Apache configuration
-│   │   
-│   │
-│   ├── mariadb/            # Role for MariaDB installation and configuration
-│   │   ├── tasks/          # Tasks related to MariaDB
-│   │       ├── main.yaml   # MariaDB configuration
-│   │   
-│   │
-│   └── PHP/                # Role for PHP 
-│       ├── tasks/          # Tasks related to PHP setup
-│           └── main.yaml   # PHP configuration             
-│
-├── README.md               # Project documentation (this file)
-
+![image](https://github.com/user-attachments/assets/ad9fbdae-b6d5-4669-83db-cb54749101f6)
 
 ## Setup Instructions
 
