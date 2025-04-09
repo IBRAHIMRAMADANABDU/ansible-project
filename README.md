@@ -23,7 +23,8 @@ Before running the Ansible playbook, ensure you have the following:
 ## Project Structure
 
 Here is the structure of the project directory:
-![image](https://github.com/user-attachments/assets/ad9fbdae-b6d5-4669-83db-cb54749101f6)
+![diagram-export-4-9-2025-8_55_23-PM](https://github.com/user-attachments/assets/00359b0c-3144-4ec4-bb9c-f8138fed9335)
+
 
 ## Setup Instructions
 
