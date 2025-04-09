@@ -1,0 +1,12 @@
+- name: Install PHP and required extensions
+  yum:
+    name:
+      - php
+      - php-mysqlnd
+      - php-gd
+      - php-curl
+      - php-mbstring
+      - php-xml   # Replace php-xmlrpc with php-xml
+    state: present
+    update_cache: yes
+
